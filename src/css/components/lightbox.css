@@ -1,3 +1,34 @@
-/**
-* Lightbox
-*/
+img[data-full-img] {
+  cursor: pointer;
+}
+
+#lightbox {
+  background-color: white;
+  opacity: 50%;
+  
+}
+#lightbox[open] {
+  animation: scaleUp 600ms;
+}
+@keyframes scaleUp {
+  from {
+    transform: scale(0.1);
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+}
+
+dialog#lightbox::backdrop {
+  
+  animation: fadeIn 3s;
+  opacity: 50%;
+  background-color: orange;
+}
+
+#lightbox img {
+  
+  
+}
